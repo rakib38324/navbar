@@ -1,0 +1,117 @@
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background: linear-gradient(to right, #141e30, #243b55);
+   color: white;
+   min-height: 100vh;
+   overflow-x: hidden;
+}
+
+.navbar {
+   background: linear-gradient(to right, #1a1a1a, #333); 
+   padding: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+   font-size: 20px;
+   background: linear-gradient(to right, #ffcc00, #00ccff);
+   -webkit-background-clip: text;
+   color: transparent;
+   display: inline-block;
+   font-weight: bold;
+}
+
+.menu {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.bar {
+   background-color: white;
+   height: 3px;
+   width: 40px;
+   margin: 5px 0;
+   transition: background-color 0.3s;
+}
+
+.nav-list {
+   list-style: none;
+   padding: 0;
+   display: flex;
+}
+
+.nav-list li {
+   margin: 0 15px;
+}
+
+.nav-list a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 16px;
+   transition: color 0.3s, box-shadow 0.3s;
+}
+
+.nav-list a:hover {
+   color: #ffcc00;
+   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-list a.active {
+   color: #00ccff;
+   box-shadow: 0 0 15px rgba(0, 204, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+   .menu {
+       display: flex;
+   }
+
+   .navbar {
+       position: fixed;
+       width: 100%;
+       top: 0;
+       z-index: 1000;
+   }
+
+   .nav-list {
+       display: none;
+       flex-direction: column;
+       width: 100%;
+       position: absolute;
+       background-color: #333;
+       top: 65px;
+       left: 0;
+       z-index: 1;
+   }
+
+   .nav-list a:hover {
+      color: #ffcc00;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+   }
+
+   .nav-list.show {
+       display: flex;
+   }
+
+   .nav-list li {
+       text-align: center;
+       margin: 0;
+       padding: 15px 0;
+       border-bottom: 1px solid #555;
+   }
+
+   .nav-list a {
+       color: white;
+   }
+
+   .nav-list a:hover,
+   .nav-list a.active {
+       background-color: #555;
+   }
+}
