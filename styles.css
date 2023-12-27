@@ -70,6 +70,7 @@ body {
 @media (max-width: 768px) {
    .menu {
        display: flex;
+       padding-right: 25px;
    }
 
    .navbar {
@@ -84,8 +85,8 @@ body {
        flex-direction: column;
        width: 100%;
        position: absolute;
-       background-color: #333;
-       top: 65px;
+       background-color: #30323a;
+       top: 52px;
        left: 0;
        z-index: 1;
    }
